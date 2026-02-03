@@ -7,6 +7,8 @@
 
 body {
     overflow: hidden;
+    overflow-x: hidden;
+
 }
 
 .container {
@@ -281,56 +283,135 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
     .container {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 6rem; /* space for search bar */
         padding: 1rem;
     }
 
-    .weather-card {
-        padding: 2rem;
+     .weather-card {
+        padding: 1.75rem;
+        border-radius: 1.5rem;
     }
 
     .weather {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 1.2rem;
+    }
+
+    .temp-section {
+        justify-content: center;
     }
 
     .temp {
-        font-size: 4rem;
+        font-size: 3.8rem;
+    }
+
+    .temp-unit {
+        font-size: 0.9rem;
+        margin-top: 0.6rem;
     }
 
     .location {
-        font-size: 2rem;
+        font-size: 1.9rem;
+    }
+
+    .datetime {
+        font-size: 0.9rem;
+    }
+
+    .weather-icon {
+        font-size: 3.2rem;
+    }
+
+    .condition {
+        font-size: 1rem;
     }
 
     .weather-details {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
     }
 
     .detail-item {
         padding: 1rem;
     }
 
+    .detail-item .value {
+        font-size: 1.2rem;
+    }
+
     .search-nav {
         padding: 1rem;
+    }
+
+    .search-container {
+        border-radius: 1.5rem;
+    }
+
+    .searchField {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .search-btn {
+        padding: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
+    .weather-card {
+        padding: 1.4rem;
+    }
+
     .temp {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 
     .location {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .weather-details {
         grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .detail-item {
+        padding: 0.9rem;
+    }
+
+    .detail-item .label {
+        font-size: 0.75rem;
+    }
+
+    .detail-item .value {
+        font-size: 1.1rem;
     }
 
     .weather-icon {
-        font-size: 3rem;
+        font-size: 2.8rem;
+    }
+
+    .search-nav {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .temp {
+        font-size: 2.9rem;
+    }
+
+    .location {
+        font-size: 1.45rem;
     }
 }
 
